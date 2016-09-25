@@ -33,3 +33,6 @@ source /usr/bin/virtualenvwrapper.sh
 ''' >> ~/.zshrc
 
 source ~/.zshrc
+
+#pip install bpython ipython
+yum install bpython ipython
