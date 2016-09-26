@@ -4,7 +4,7 @@
 # https://github.com/robbyrussell/oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# change shell
+# change default shell
 chsh -s /bin/zsh
 
 # install python pip
@@ -32,7 +32,11 @@ source /usr/bin/virtualenvwrapper.sh
 #source /usr/local/bin/virtualenvwrapper.sh
 ''' >> ~/.zshrc
 
+# change ZSH_THEME to gentoo
+sed -i "s|ZSH_THEME=\".*\"|ZSH_THEME=\"gentoo\"|g" ~/.zshrc
+
+# make it work in current context
 source ~/.zshrc
 
-#pip install bpython ipython
+#pip install bpython ipython, they are better than python default shell
 yum install bpython ipython
