@@ -1,8 +1,12 @@
 # WeizhongTu 2016-09-25
 # just tested on CentOS 7
 
+# Fedora Project EPEL(Extra Packages for Enterprise Linux)
+# for detail:  http://fedoraproject.org/wiki/EPEL
+yum install epel-release -y
+
 # install zsh
-yum makecache && yum install zsh -y
+yum install zsh -y
 
 # https://github.com/robbyrussell/oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
