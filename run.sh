@@ -1,6 +1,9 @@
 # WeizhongTu 2016-09-25
 # just tested on CentOS 7
 
+# install zsh
+yum makecache && yum install zsh -y
+
 # https://github.com/robbyrussell/oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
