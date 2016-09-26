@@ -10,9 +10,25 @@ chsh -s /bin/zsh
 # install python pip
 sudo yum install python-pip -y
 
-# cp pip.conf
+# pip.conf
+
+# linux  : ~/.config/pip/pip.conf
+# windows: $HOME/pip/pip.ini
+# macOs  : ~/.pip/pip.conf
+# more see: https://pip.pypa.io/en/stable/user_guide/#config-file
+
 mkdir -p ~/.config/pip/
-cp pip.conf ~/.config/pip/
+
+echo '''
+[global]
+timeout = 60
+index-url = http://mirrors.aliyun.com/pypi/simple
+#index-url = http://pypi.douban.com/simple
+
+[install]
+trusted-host = mirrors.aliyun.com
+#trusted-host = pypi.douban.com
+''' > ~/.config/pip/pip.conf
 
 # upgrade pip
 sudo pip install -U pip
