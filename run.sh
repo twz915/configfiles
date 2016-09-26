@@ -40,7 +40,7 @@ sudo pip install -U pip
 sudo pip completion --zsh >> .zshrc
 
 # install virtualenv
-sudo pip instal -U virtualenvwrapper
+sudo pip install -U virtualenvwrapper
 
 # setup virtualenv
 echo '''
