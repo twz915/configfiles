@@ -3,10 +3,10 @@
 
 # Fedora Project EPEL(Extra Packages for Enterprise Linux)
 # for detail:  http://fedoraproject.org/wiki/EPEL
-yum install epel-release -y
+sudo yum install epel-release -y
 
 # install zsh
-yum install zsh -y
+sudo yum install zsh -y
 
 # https://github.com/robbyrussell/oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -62,4 +62,6 @@ sed -i "s|ZSH_THEME=\".*\"|ZSH_THEME=\"gentoo\"|g" ~/.zshrc
 source ~/.zshrc
 
 #pip install bpython ipython, they are better than python default shell
-yum install bpython ipython
+sudo yum install bpython ipython
+
+
