@@ -65,3 +65,12 @@ source ~/.zshrc
 sudo yum install bpython ipython
 
 
+# vim
+sudo yum install vim -y
+
+git clone https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+# basic version
+#git clone git://github.com/amix/vimrc.git ~/.vim_runtime
+#sh ~/.vim_runtime/install_basic_vimrc.sh
