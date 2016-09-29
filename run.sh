@@ -74,3 +74,9 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 # basic version
 #git clone git://github.com/amix/vimrc.git ~/.vim_runtime
 #sh ~/.vim_runtime/install_basic_vimrc.sh
+
+# https://github.com/davidhalter/jedi-vim
+# for python auto-complete
+cd ~/.vim_runtime/sources_non_forked
+git clone https://github.com/davidhalter/jedi-vim.git
+
