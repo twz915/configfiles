@@ -80,3 +80,10 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 cd ~/.vim_runtime/sources_non_forked
 git clone https://github.com/davidhalter/jedi-vim.git
 
+# install tmux
+sudo yum install tmux
+
+# too long, don't read!
+sudo pip install tldr
+# now you can use `tldr tmux` to see how to use tmux
+
