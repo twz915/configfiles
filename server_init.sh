@@ -71,6 +71,25 @@ sudo yum install mysql-community-devel -y
 
 echo "可选安装 MySQL-server"
 sudo yum install mysql-community-server -y
+sudo systemctl start mysqld
+echo '''
+MySQL 5.6 默认密码为空，mysql -uroot 直接可以进入
+
+-- 创建数据库
+CREATE DATABASE `zqxt` DEFAULT CHARSET 'utf8';
+ALTER DATABASE `zqxt` CHARACTER SET 'utf8';
+
+GRANT ALL ON zqxt.* TO zqxt@'%' IDENTIFIED BY 'password';
+
+-- 创建只读帐户
+REVOKE ALL ON zqxt.* FROM 'readonly'@'localhost';
+GRANT SELECT ON zqxt.* TO 'readonly'@'localhost' IDENTIFIED BY 'password';
+-- REVOKE ALL ON zqxt.* FROM 'readonly'@'%';
+-- GRANT SELECT ON zqxt.* TO 'readonly'@'%' IDENTIFIED BY 'password';
+
+FLUSH PRIVILEGES;
+EXIT;
+'''
 
 echo "部署 django 项目"
 PROJECT_NAME=flinfo
