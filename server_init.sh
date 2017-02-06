@@ -46,7 +46,29 @@ echo "tengine(nginx) 编译完成，安装";
 sudo make install
 
 echo "启动tengine(nginx)，配置文件在 /usr/local/nginx/conf 中";
-sudo /usr/local/nginx/sbin/nginx -s start
+# sudo /usr/local/nginx/sbin/nginx -s start
+
+echo "添加tengine(nginx)自启动脚本 参考：https://www.nginx.com/resources/wiki/start/topics/examples/initscripts/"
+echo '''[Unit]
+Description=The NGINX HTTP and reverse proxy server
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/run/nginx.pid
+ExecStartPre=/usr/local/nginx/sbin/nginx -t
+ExecStart=/usr/local/nginx/sbin/nginx
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+''' > /lib/systemd/system/nginx.service
+
+sudo systemctl enable nginx
+sudo systemctl start nginx
+
 
 cd $SERVER_INIT_TMP_PATH
 echo "安装 supervisor 和 uwsgi"
