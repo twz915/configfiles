@@ -55,7 +55,7 @@ After=syslog.target network.target remote-fs.target nss-lookup.target
 
 [Service]
 Type=forking
-PIDFile=/run/nginx.pid
+PIDFile=/usr/local/nginx/logs/nginx.pid
 ExecStartPre=/usr/local/nginx/sbin/nginx -t
 ExecStart=/usr/local/nginx/sbin/nginx
 ExecReload=/bin/kill -s HUP $MAINPID
@@ -64,7 +64,8 @@ PrivateTmp=true
 
 [Install]
 WantedBy=multi-user.target
-''' > /lib/systemd/system/nginx.service
+''' > ./nginx.service
+sudo cp ./nginx.service /lib/systemd/system/nginx.service
 
 sudo systemctl enable nginx
 sudo systemctl start nginx
