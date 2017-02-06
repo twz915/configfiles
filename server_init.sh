@@ -72,8 +72,14 @@ sudo yum install mysql-community-devel -y
 echo "可选安装 MySQL-server"
 sudo yum install mysql-community-server -y
 sudo systemctl start mysqld
+echo "开机自启 MySQL"
+sudo systemctl enable mysqld
+
 echo '''
+====  MySQL使用指南  ====
+-----------------------------------------------
 MySQL 5.6 默认密码为空，mysql -uroot 直接可以进入
+导入数据shell命令： cat bk.sql | mysql -uroot db
 
 -- 创建数据库
 CREATE DATABASE `zqxt` DEFAULT CHARSET 'utf8';
