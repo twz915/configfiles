@@ -92,7 +92,7 @@ EXIT;
 '''
 
 echo "部署 django 项目"
-PROJECT_NAME=flinfo
+PROJECT_NAME=zqxt
 PROJECT_PATH=~/$PROJECT_NAME
 
 mkvirtualenv $PROJECT_NAME
