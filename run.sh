@@ -6,6 +6,12 @@
 sudo yum install epel-release -y
 sudo yum install git -y
 
+# common used packages from http://www.codeghar.com/blog/install-latest-python-on-centos-7.html
+sudo yum install -y rpm-build
+sudo yum install -y redhat-rpm-config
+sudo yum install -y yum-utils
+sudo yum groupinstall -y "Development Tools"
+
 # install zsh
 sudo yum install zsh -y
 
