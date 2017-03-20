@@ -4,6 +4,7 @@
 # Fedora Project EPEL(Extra Packages for Enterprise Linux)
 # for detail:  http://fedoraproject.org/wiki/EPEL
 sudo yum install epel-release -y
+sudo yum install git -y
 
 # install zsh
 sudo yum install zsh -y
@@ -62,7 +63,7 @@ sed -i "s|ZSH_THEME=\".*\"|ZSH_THEME=\"gentoo\"|g" ~/.zshrc
 source ~/.zshrc
 
 #pip install bpython ipython, they are better than python default shell
-sudo yum install bpython ipython
+sudo yum install bpython ipython -y
 
 
 # vim
@@ -90,9 +91,9 @@ set number                     " Show current line number
 
 
 # install tmux
-sudo yum install tmux
+sudo yum install tmux -y
 
 # too long, don't read!
-sudo pip install tldr
+sudo pip install tldr -y
 # now you can use `tldr tmux` to see how to use tmux
 
