@@ -1,4 +1,3 @@
-集团都是使用 MySQL 5.6，所以推荐安装 MySQL 5.6。
 以下适用于 CentOS 7，如果是 CentOS5/6，修改一下 `baseurl`后面的 el/7 把 7 改成对应的 5 或 6 即可。
 操作帐户需要有 `sudo` 权限，把下面的内容保存成 `mysql_install.sh` 执行即可。
 ```
