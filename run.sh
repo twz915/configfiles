@@ -12,7 +12,8 @@ sudo yum install -y redhat-rpm-config
 sudo yum install -y yum-utils
 sudo yum groupinstall -y "Development Tools"
 
-sudo yum install readline-devel sqlite-devel bzip2-devel -y
+# common libs
+sudo yum install readline-devel sqlite-devel bzip2-devel freetype-devel libpng-devel libxml2-devel -y
 
 # install zsh
 sudo yum install zsh -y
