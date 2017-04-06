@@ -14,6 +14,7 @@ sudo yum groupinstall -y "Development Tools"
 
 # common libs
 sudo yum install readline-devel sqlite-devel bzip2-devel freetype-devel libpng-devel openjpeg-devel libxslt-devel libxml2-devel -y
+sudo yum install cmake -y
 
 # install zsh
 sudo yum install zsh -y
