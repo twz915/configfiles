@@ -54,6 +54,8 @@ sudo pip install -U pip
 # set pip auto complete
 sudo pip completion --zsh >> .zshrc
 
+sudo echo "alias gm=git merge --no-edit -s recursive -Xignore-space-at-eol --no-ff " >> .zshrc
+
 # install virtualenv
 sudo pip install -U virtualenvwrapper
 
