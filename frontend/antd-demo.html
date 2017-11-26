@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+<head>
+<link href="https://cdn.bootcss.com/antd/2.13.10/antd.min.css" rel="stylesheet prefetch">
+<script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+<script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+<!-- <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script> -->
+<!-- <script src="https://cdn.bootcss.com/moment.js/2.19.2/moment-with-locales.min.js"></script> -->
+<script src="https://cdn.bootcss.com/antd/2.13.10/antd-with-locales.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<script >
+"use strict";
+var mountNode = document.getElementById('container');
+var DatePicker = antd.DatePicker;
+// var MonthPicker = DatePicker.MonthPicker, RangePicker = DatePicker.RangePicker;
+function onChange(date, dateString) {
+    console.log(date, dateString);
+}
+ReactDOM.render(
+    React.createElement(DatePicker, { onChange: onChange }),
+    mountNode
+);
+</script>
+</body>
+</html>
