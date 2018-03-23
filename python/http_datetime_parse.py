@@ -1,3 +1,4 @@
+import pytz
 from dateutil import parser
 
 
@@ -9,3 +10,7 @@ def parse_http_datetime(s):
     except:
         pass
     return None
+
+
+if __name__ == '__main__':
+    parse_http_datetime('Fri, 23 Mar 2018 01:30:12 GMT')
